@@ -8,3 +8,6 @@ The goal was to make a global transportation map which would be more readable th
 The map is displayed by Mapbox, composed of a custom background with little saturated colours, and a dozen of transportation layers on top, whose data has to be downloaded.
 "JustGo" was originally a bus transportation map for Paris with itineraries (justgo.alwaysdata.net), then transformed and translated to become this project. 
 The website is here : https://justgo.alwaysdata.net/global/
+
+## TO-DO list
+- Display stations mapped with only an area (building) and not with a simple node.
