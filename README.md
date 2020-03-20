@@ -2,7 +2,7 @@
 Map of regional public transports based on OpenStreetMap
 
 ## Purpose
-The goal was to make a global transportation map which would be more readable than the existant ones, especially by taking into account the colour attribute for bus and train lines.
+The goal was to make an urban transportation map which would be more readable than the existant ones, especially by taking into account the colour attribute for bus and train lines, and this for any city in the world.
 
 ## How it works
 The map is displayed by Mapbox, composed of a custom background with little saturated colours, and a dozen of transportation layers on top, whose data has to be downloaded.
