@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main_style.css"/>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.css' rel='stylesheet' />
+        <link rel="shortcut icon" href="Images/icon_big.png" >
+        <link rel="apple-touch-icon" href="Images/icon_big.png">
+        <title>Just Go ! - Global Transport Map</title>
+        <meta name="description" content="Worldwide urban transportation map based on Openstreetmap data." />
+        <meta name="keywords" content="bus,train,transport,city,map,Openstreetmap" />
+    </head>
+    <!--Début du body-->
+    <body class="withaside">
+        <header>
+    	   <h1>Just Go ! <span class="subtitle">Global version</span></h1>
+        </header>
+
+        <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.1/mapbox-gl-geocoder.min.js'></script>
+
+        <aside><span class='cote'>Layout</span><h4>Toggle visible bus lines :</h4>
+            <div id="menu"></div>
+            <div id="infos"></div>
+		</aside>
+
+        <section class='left'><span class='cote' onclick='openjourney()'>Download data</span>
+            <div><h4>Data downloading:</h4>
+                <span id="download_message"></span><br/>
+                <button onclick="updateAllData()" class="main_button">Download all in view</button><br/>
+                <button onclick="updateData('bus')">Only bus lines</button>
+                <button onclick="updateData('bus stops')">Bus stops</button>
+                <button onclick="updateData('train')">Trains</button>
+                <button onclick="updateData('railway stations')">Stations</button>
+            </div>
+            <div>
+                <input type="checkbox" id="inclregional" name="inclregional" style='display: inline;' checked><label for="inclregional">Include regional trains</label><br/>
+                <input type="checkbox" id="no_alert" name="no_alert" style='display: inline;'><label for="no_alert">Get tag info via the console</label><br/>
+                <input type="checkbox" id="no_timeout" name="no_timeout" style='display: inline;'><label for="no_timeout">No time limit</label>
+            </div>
+        </section>
+
+        <div id="wpopup_container">
+                <div class='invisible'></div>
+        </div>
+
+        <div id="maincontent" class="withasideleft withaside">
+            <section id='map'></section>
+        </div>
+        <footer><a href=contribute.html class="questionmark">?</a><span title="v2.3"> © Openstreetmap Contributors </span><a href=# onclick="goMobile()" class="gomobile"> Full screen (mobile version) </a></footer>
+        <script src='osmtogeojson.js'></script>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.2.0/mapbox-gl.js'></script>
+        <script src="map_common.js"></script>
+        <script src="map.js"></script>
+    </body>
+</html>
