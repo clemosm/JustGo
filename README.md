@@ -12,6 +12,7 @@ It makes use of osmtogeojson.
 
 ## TO-DO list
 - Display stations mapped with only an area (building) and not with a simple node.
+- Set offsets for bus lines so that all lines can be seen when they take the same road.
 
 
-- Note : The mapbox token is specific to the justgo address, so if you want to use these files you should have your own token.
+Note : The mapbox token is specific to the justgo address, so if you want to use these files you should have your own token.
